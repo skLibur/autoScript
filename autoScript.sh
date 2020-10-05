@@ -70,6 +70,7 @@ if [ $? != 0 ]
 fi 
 
 
+
 # Перезагружаем веб-сервер
 systemctl reload apache2.service
 
@@ -100,9 +101,9 @@ rmdir $siterootDir/wordpress
 mysql -e "CREATE DATABASE $DB_name"
 
 # Создание нового пользователя БД MySQL
-mysql -e "CREATE USER '$DB_userName'@'localhost' IDENTIFIED BY '$DB_password';"
+mysql -e "CREATE USER '$DB_userName'@'$siteName' IDENTIFIED BY '$DB_password';"
 # Предоставить права для этого пользователя БД
-mysql -e "GRANT ALL PRIVILEGES ON $DB_name.* TO '$DB_userName'@'localhost' WITH GRANT OPTION;"
+mysql -e "GRANT ALL PRIVILEGES ON $DB_name.* TO '$DB_userName'@'$siteName' WITH GRANT OPTION;"
 
 
 ##DZ-4
