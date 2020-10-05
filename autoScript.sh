@@ -126,7 +126,7 @@ sed -i "s/.*username_here.*/define( 'DB_USER', '$DB_userName' );/" wp-config.php
 sed -i "s/.*password_here.*/define( 'DB_PASSWORD', '$DB_password' );/" wp-config.php
 
 # /** Имя сервера MySQL */
-sed -i "s/.*localhost.*/define( 'DB_HOST', '$siteName' );/" wp-config.php
+sed -i "s/.*localhost.*/define( 'DB_HOST', 'localhost' );/" wp-config.php
 
 #############################################################################
 ## Настройка конфигов Apache2
