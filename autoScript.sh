@@ -166,6 +166,8 @@ if [ $? = 0 ]
 	systemctl start apache2.service
 fi
 
+# Добавляем DNS-запись
+echo "127.0.0.10 $siteName www.$siteName" >> /etc/hosts
 
 #############################################################################
 
